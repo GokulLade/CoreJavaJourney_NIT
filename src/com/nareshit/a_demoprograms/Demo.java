@@ -1,18 +1,28 @@
 package com.nareshit.a_demoprograms;
 
-
-class StudentDemo{
-	StudentDemo m1() 
+interface I1{
+	default void m1()
 	{
-		System.out.println("Student method");
-		return null;
+		System.out.println("Interface Default method");
 	}
+}
+class C1{
+	public void m1()
+	{
+		System.out.println("Class method");
+	}
+}
+
+class Demo1 extends C1 implements I1{
+	
 }
 public class Demo {
 
 	public static void main(String[] args) 
 	{
-		StudentDemo studentDemo= new StudentDemo().m1();
+		Demo1 d=new Demo1();
+		d.m1();
+		
 	}
 
 }
