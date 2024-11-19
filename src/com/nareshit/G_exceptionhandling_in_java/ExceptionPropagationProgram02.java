@@ -7,11 +7,11 @@ public class ExceptionPropagationProgram02 {
 	public static void main(String[] args) 
 	{
 
+		m3();
 		try {
 			
 			m1();
 			m2();
-			m3();
 		}
 		catch(Exception e)
 		{
