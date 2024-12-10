@@ -7,7 +7,7 @@ public class FileInputStreamProgram01 {
 
 	public static void main(String[] args) throws FileNotFoundException 
 	{
-		FileInputStream fis=new FileInputStream("C:\\\\Documents\\\\file.txt");
+		FileInputStream fis=new FileInputStream("C:\\Documents\\file.txt");
 		
 		try(fis) 
 		{

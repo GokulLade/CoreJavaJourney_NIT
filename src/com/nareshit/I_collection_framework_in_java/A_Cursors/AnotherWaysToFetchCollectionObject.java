@@ -3,7 +3,7 @@ package com.nareshit.I_collection_framework_in_java.A_Cursors;
 import java.util.List;
 import java.util.Vector;
 
-public class WaysToFetchCollectionObject {
+public class AnotherWaysToFetchCollectionObject {
 
 	public static void main(String[] args) 
 	{
@@ -15,7 +15,7 @@ public class WaysToFetchCollectionObject {
 		al.add("Orange");
 		
 		System.out.println("1. Using toString Method :");
-		System.out.println(al.toString()); //Using toString()
+		System.out.println(al.toString());
 		
 		System.out.println();
 		System.out.println("2. Using  Ordinary for Loop : ");
@@ -31,6 +31,11 @@ public class WaysToFetchCollectionObject {
 		{
 			System.out.print(value+", ");
 		}
+		
+		System.out.println();
+		System.out.println();
+		System.out.println("4. Using Method Reference: ");
+		al.forEach(System.out::println);
 
 	}
 
