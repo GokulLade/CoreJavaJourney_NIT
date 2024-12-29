@@ -1,6 +1,5 @@
 package com.nareshit.D_java_support_concepts.J_working_with_generics;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
