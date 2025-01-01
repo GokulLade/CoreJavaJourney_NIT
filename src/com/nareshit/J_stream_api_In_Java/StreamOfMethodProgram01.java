@@ -13,7 +13,6 @@ public class StreamOfMethodProgram01 {
 		System.out.println("...............................");
 
 		// Anonymous Array Object (Stream of Arrays)
-
 		Stream<Integer> strm = Stream.of(new Integer[] { 15, 29, 45, 8, 16 });
 		strm.forEach(p -> System.out.println(p));
 	}
