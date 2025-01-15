@@ -1,14 +1,17 @@
 package com.nareshit.a_demoprograms;
 
-import java.util.Optional;
+import java.util.function.Consumer;
 
-class Employee{
+class StaticDemo{
 	
-	private Integer sal;
-	
-	public Integer getSalary()
+	public static void print(String msg)
 	{
-		return this.sal;
+		System.out.println(msg);
+	}
+	
+	public void print(int i1)
+	{
+		System.out.println(i1+"  ");
 	}
 }
 
@@ -16,14 +19,12 @@ public class Demo {
 
 	public static void main(String[] args) 
 	{
-		Employee e=new Employee();
-		System.out.println(e.getSalary());
+		Consumer<String> cm=StaticDemo::print;
+		cm.accept("Hello");
 		
-		Optional<Employee> name = Optional.of(e);
-		if(name.isPresent())
-		{
-			System.out.println(name.get());
-		}
+		StaticDemo sd=new StaticDemo();
+		Consumer<Integer> i=sd::print;
+		i.accept(12);
 	}
 
 }
