@@ -25,7 +25,7 @@ public class OptionalClassProgram03 {
 			} 
 			else 
 			{
-				System.out.println("No Value in the Container");
+				System.err.println("No Value in the Container");
 			}
 		}
 	}

@@ -1,30 +1,38 @@
 package com.nareshit.a_demoprograms;
 
-import java.util.function.Consumer;
-
-class StaticDemo{
-	
-	public static void print(String msg)
-	{
-		System.out.println(msg);
-	}
-	
-	public void print(int i1)
-	{
-		System.out.println(i1+"  ");
-	}
-}
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Set;
 
 public class Demo {
 
 	public static void main(String[] args) 
 	{
-		Consumer<String> cm=StaticDemo::print;
-		cm.accept("Hello");
+		LocalDate d=LocalDate.now();
+		System.out.println(d);
 		
-		StaticDemo sd=new StaticDemo();
-		Consumer<Integer> i=sd::print;
-		i.accept(12);
+		LocalTime t= LocalTime.now();
+		System.out.println(t);
+		
+		LocalDateTime dt= LocalDateTime.now();
+		System.out.println(dt);
+		
+		ZonedDateTime z=ZonedDateTime.now();
+		System.out.println(z);
+		
+		ZoneId zone=z.getZone();
+//		Set<String> availableZoneIds = ZoneId.getAvailableZoneIds();
+//		availableZoneIds.forEach(System.out::println);
+		
+		ZoneId newZone = ZoneId.of("America/Managua");
+		System.out.println(newZone.getId());
+		
+		DateTimeFormatter df=DateTimeFormatter.ofPattern("dd");
+		System.out.println(df);
 	}
 
 }
