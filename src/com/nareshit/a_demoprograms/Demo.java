@@ -1,30 +1,12 @@
 package com.nareshit.a_demoprograms;
-
-interface ICollect{
-	
-}
-class Collect{
-	
-	public static ICollect getObject()
-	{
-		return null;
-	}
-}
-
-class Demo1{
-	
-	public void print(ICollect i)
-	{
-		
-	}
-}
+//1, 2, 3, 4, 6, 8, 12, 16, 24 and 48.
+//Printing the factories string char
 public class Demo {
-
-	public static void main(String[] args) 
+	
+	
+	public static void main(String[] args)
 	{
-		Demo1 d= new Demo1();
 		
-		d.print(Collect.getObject());
+		
 	}
-
 }
